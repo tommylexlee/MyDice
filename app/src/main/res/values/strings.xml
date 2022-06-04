@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyDice</string>
+    <string name="ins_cheat_off">Tap anywhere\nto roll the dice.</string>
+    <string name="ins_cheat_on">Tap anywhere\nto roll the dice,</string>
 </resources>

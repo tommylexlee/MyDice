@@ -2,17 +2,14 @@ package com.example.mydice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,29 +88,29 @@ public class MainActivity extends AppCompatActivity {
         Log.d("setDiceImage", "iv: " + iv.toString());
         switch (num) {
             case 1:
-                iv.setImageResource(R.drawable.dice_1);
+                iv.setImageResource(R.drawable.dice1);
                 break;
             case 2:
-                iv.setImageResource(R.drawable.dice_2);
+                iv.setImageResource(R.drawable.dice2);
                 break;
             case 3:
-                iv.setImageResource(R.drawable.dice_3);
+                iv.setImageResource(R.drawable.dice3);
                 break;
             case 4:
-                iv.setImageResource(R.drawable.dice_4);
+                iv.setImageResource(R.drawable.dice4);
                 break;
             case 5:
-                iv.setImageResource(R.drawable.dice_5);
+                iv.setImageResource(R.drawable.dice5);
                 break;
             case 6:
-                iv.setImageResource(R.drawable.dice_6);
+                iv.setImageResource(R.drawable.dice6);
                 break;
         }
     }
 
     public void toggleCheatMode(View view) {
         cheatMode = !cheatMode;
-        setInsTextColor(cheatMode);
+        setInsText(cheatMode);
 
         Button b = (Button) view;
         Log.d("View", "beginRow: " + b.getText());
@@ -131,20 +128,20 @@ public class MainActivity extends AppCompatActivity {
         MainActivity.cheatMode = cheatMode;
     }
 
-    public void setInsTextColor (boolean cheatMode){
+    public void setInsText(boolean cheatMode){
 
         ViewGroup container = findViewById(R.id.layout_container_buttons);
 
-        int colour = 0;
+        String text = null;
 
         if (cheatMode) {
-            colour = R.color.black;
+            text = getResources().getString(R.string.ins_cheat_on);
         } else {
-            colour = R.color.grey;
+            text = getResources().getString(R.string.ins_cheat_off);
         }
 
         TextView insText = findViewById(R.id.insText);
-        insText.setTextColor(getResources().getColor(colour));
+        insText.setText(text);
     }
 
 }

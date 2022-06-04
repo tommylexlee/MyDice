@@ -16,8 +16,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="77dp"
         android:layout_marginTop="49dp"
-        android:background="@color/black"
-        app:srcCompat="@drawable/dice_6" />
+        app:srcCompat="@drawable/dice6" />
 
     <ImageView
         android:id="@+id/diceBottom"
@@ -26,8 +25,7 @@
         android:layout_below="@id/diceTop"
         android:layout_alignLeft="@id/diceTop"
         android:layout_marginTop="150dp"
-        android:background="@color/black"
-        app:srcCompat="@drawable/dice_6" />
+        app:srcCompat="@drawable/dice6" />
 
     <Button
         android:id="@+id/button1"
@@ -162,7 +160,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="60dp"
-        android:text="Tap anywhere \nto roll the dice"
+        android:text="@string/ins_cheat_off"
         android:textSize="20sp" />
 
 </RelativeLayout>
